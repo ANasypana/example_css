@@ -1,0 +1,10 @@
+.technologies{
+  background-color: #F9FAFC;
+/*  grid-column: 1 / -1*/;
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  justify-content: center;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
+
+}

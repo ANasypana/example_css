@@ -1,0 +1,224 @@
+%heading{
+  font-size: 4rem;
+  @media only screen and (max-width: $bp-small){
+    font-size: 3rem;
+  }
+  line-height: 6.6rem;
+  display: inline-block;
+  width: 100%;
+}
+
+%description{
+  font-size: 1.8rem;
+  @media only screen and (max-width: $bp-small){
+    font-size: 1.6rem;
+  }
+  line-height: 3.4rem;
+  text-align: start;
+}
+
+.wrapper{
+  width: 115rem;
+  padding: 1.5rem;
+
+  @media only screen and (max-width: $bp-medium){
+    max-width: 77rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    max-width: 45rem;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 3.5rem;
+ /* justify-content: center;*/
+  justify-items: center;
+  align-items: center;
+  justify-content: start;
+}
+
+.wrapper-secondary{
+  width: 115rem;
+  padding-left: 1.5rem;
+
+
+  @media only screen and (max-width: $bp-medium){
+    width: 77rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    width: 45rem;
+  }
+
+  display: grid;
+  grid-template-rows: repeat(auto-fit, min-content);
+  justify-items: start;
+  /*align-items: start;
+  align-content: start;*/
+  justify-content: start;
+}
+
+.wrapper-between{
+
+  width: 115rem;
+  padding-left: 1.5rem;
+
+
+  @media only screen and (max-width: $bp-medium){
+    width: 77rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    min-width: 45rem;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  justify-items: start;
+
+}
+
+.heading{
+  @extend %heading;
+
+  &-light{
+    @extend %heading;
+    color: #fff;
+    &-hand{
+      &::before{
+        width: 7.6rem;
+        height: 7.6rem;
+        content: "";
+        display: block;
+
+        @media only screen and (max-width: $bp-small){
+          display: none;
+        }
+
+        transform: translate(650%, 85%);
+        background-image: url("../img/hand-shake.png");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &::after{
+        content: "";
+        border-bottom: 1px solid $color-secondary;
+        transform: translate(0%, -300%);
+        display: block;
+
+        @media only screen and (max-width: $bp-small){
+          display: none;
+        }
+        height: 35px;
+        width: 14rem;
+      }
+    }
+  }
+}
+
+.heading-secondary{
+  font-size: 3.2rem;
+  line-height: 6rem;
+  font-weight: 500;
+  color: $color-secondary;
+  &::after{
+    content: "";
+    background-color: $color-grey-light-2;
+    display: block;
+    height: 2px;
+    width: 32.072rem;
+    transform: translateY(1rem)
+  }
+}
+
+
+
+.description{
+  @extend %description;
+
+  &-light{
+    @extend %description;
+    color: #fff;;
+  }
+  &-lighter{
+    @extend %description;
+    color: $color-grey-light-1;
+    align-self: start;
+  }
+
+  &-section{
+    @extend %description;
+    padding-right: 30%;
+  }
+
+}
+
+.btn{
+  &,
+  &:link,
+  &:visited{
+    background-color: $color-secondary;
+    text-align: start;
+    padding-left: 2.5rem;
+    justify-content: start;
+    width: 26.6rem;
+    height: 5.9rem;
+    box-shadow: 0 .5rem 1rem rgba(#000,.2);
+    color: $color-primary;
+    border: none;
+    border-radius: 0.7rem;
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    transition: all .2s;
+  }
+
+  &::before{
+    content: "\003e";
+    position: absolute;
+    display: block;
+    font-size: 2rem;
+    top: 1.9rem;
+    right: 4rem;
+  }
+
+  &:hover{
+    background-color: rgba(254, 203, 51, .8);
+    transform: scale(1.1);
+    font-weight: 500;
+  }
+
+  &:focus,
+  &:active{
+   outline: none;
+   font-weight: 500;
+   background-color: rgba(254, 203, 51, .8);
+  }
+}
+
+.line{
+  border-color: $color-secondary;
+  width: 14rem;
+  height: 1px;
+}
+
+.block-item{
+  width: 32rem;
+  align-self: start;
+}
+
+.mb-sm{margin-bottom: 1rem}
+.mb-md{margin-bottom: 3.5rem}
+.mb-lg{margin-bottom: 5rem}
+.mb-hg{
+  margin-bottom: 8rem;
+  @media only screen and (max-width: $bp-small){
+    margin-bottom: 6rem;
+  }
+
+}
+.uppercase{text-transform: uppercase}

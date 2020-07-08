@@ -1,0 +1,44 @@
+.footer{
+  background-color: $color-grey-dark-1;
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 3.9rem;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__contact{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    transition: all .2s;
+    &:hover{
+      color: $color-secondary;
+      font-weight: 500;
+      transform: translateY(-0.3rem);
+    }
+  }
+
+  &__bottom{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    border-top: 1px solid $color-grey-light-2;
+
+  }
+
+
+}
+
+.copyright{
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  justify-self: center;
+}

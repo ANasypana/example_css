@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/GothaProReg.eot');
+  src: local('☺'), url('../fonts/GothaProReg.woff') format('woff'), url('../fonts/GothaProReg.ttf') format('truetype'), url('../fonts/GothaProReg.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../fonts/GothaProMed.eot');
+  src: local('☺'), url('../fonts/GothaProMed.woff') format('woff'), url('../fonts/GothaProMed.ttf') format('truetype'), url('../fonts/GothaProMed.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// COLOR VARIABLES
+$color-primary: #333;
+$color-primary-light: #4f4f4f;
+
+$color-secondary: #fecb33;
+
+$color-grey-light-1: #828282;
+$color-grey-light-2: #BDBDBD;
+
+
+$color-grey-dark-1: #141414;
+
+
+// FONT
+$font-primary: 'Gotham Pro', sans-serif;
+
+
+//Responsive Breakpoints
+$bp-largest: 75em; //1200px
+$bp-large: 56.25em; //900px
+$bp-medium: 50em; // 800px
+$bp-small: 37.7em; // 600px
+
+
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem=10px(10px/16px)
+}
+
+body{
+  font-family: $font-primary;
+  color: $color-primary;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 80vh repeat(5, min-content);
+  /*grid-template-columns: 1fr repeat(3, 45.1rem) 1fr;
+  grid-column-gap: 3.5rem;*/
+}
